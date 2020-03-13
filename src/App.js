@@ -1,9 +1,13 @@
 import React from 'react';
-
+import Header from './components/Header';
 import './App.css';
 
 function App() {
-  return <div> Train </div>;
+  return (
+    <>
+      <Header></Header>
+    </>
+  );
 }
 
 export default App;
