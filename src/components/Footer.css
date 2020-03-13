@@ -1,0 +1,11 @@
+.rpclogo {
+  height: 120px;
+  display: block;
+  margin: 0 auto;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  border-top: 4px dashed black;
+  width: 100%;
+}
