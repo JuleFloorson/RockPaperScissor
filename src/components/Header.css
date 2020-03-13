@@ -1,46 +1,47 @@
 .header {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   font-family: Hiragino Maru Gothic ProN;
   font-size: 28px;
 }
 
-.first_line {
-  display: flex;
-  flex-direction: row;
-  border: 4px dashed black;
-  height: 90px;
-}
-.heading_first {
-  margin: 0px;
-  padding-left: 10px;
-  width: 250px;
-}
-.first_div {
-  border-left: 4px dashed black;
-  height: 86px;
-  width: 125px;
-}
-.second_line {
-  display: flex;
-  flex-direction: row;
-  border-bottom: 4px dashed black;
-  border-right: 4px dashed black;
-}
-.second_div {
-  border-right: 4px dashed black;
-  border-left: 4px dashed black;
-  width: 125px;
+.header > div,
+h1 {
+  margin: 0;
+  border-bottom: black dashed 4px;
+  border-right: black dashed 4px;
 }
 
-.heading_second {
-  padding-left: 75px;
-  margin: 0px;
+.spacer {
+  flex-basis: 25%;
 }
-.heading_third {
+
+.wider_div {
+  flex-basis: 75%;
+}
+.widest_div {
+  flex-basis: 100%;
+}
+.first {
+  padding-left: 15px;
+}
+
+.second {
+  margin: 0px;
+  padding-right: 15px;
+  text-align: right;
+}
+.third {
   margin: 0px;
   text-align: center;
   border-right: 4px dashed black;
   border-left: 4px dashed black;
   border-bottom: 4px dashed black;
+}
+.line_left {
+  border-left: 4px dashed black;
+}
+.line_top {
+  border-top: 4px dashed black;
 }

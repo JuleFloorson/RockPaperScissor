@@ -4,16 +4,11 @@ import React from 'react';
 function Header() {
   return (
     <header className="header">
-      <div className="first_line">
-        <h1 className="heading_first">Rock</h1>
-        <div className="first_div"></div>
-      </div>
-      <div className="second_line">
-        <div className="second_div"></div>
-        <h1 className="heading_second">Paper</h1>
-      </div>
-
-      <h1 className="heading_third">Scissor</h1>
+      <h1 className="first wider_div line_left line_top">Rock</h1>
+      <div className="spacer line_top"></div>
+      <div className="spacer line_left"></div>
+      <h1 className="second wider_div">Paper</h1>
+      <h1 className="third widest_div">Scissors</h1>
     </header>
   );
 }
