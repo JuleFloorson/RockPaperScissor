@@ -1,10 +1,10 @@
-.card {
+.card_home {
   display: flex;
   flex-direction: column;
   margin: 80px;
   align-items: center;
 }
-.button {
+.button_home {
   width: 250px;
   height: 80px;
   border: 3px solid black;
