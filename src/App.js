@@ -12,7 +12,7 @@ function App() {
         <Header />
         <main>
           <Switch>
-            <Route path="../pages/home">
+            <Route path="/home">
               <Home />
             </Route>
           </Switch>

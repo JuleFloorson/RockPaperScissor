@@ -8,7 +8,7 @@ function Header() {
       <div className="spacer line_top"></div>
       <div className="spacer line_left"></div>
       <h1 className="second wider_div">Paper</h1>
-      <h1 className="third widest_div">Scissors</h1>
+      <h1 className="third widest_div">Scissor</h1>
     </header>
   );
 }
