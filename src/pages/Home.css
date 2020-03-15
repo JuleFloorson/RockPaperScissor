@@ -1,22 +1,22 @@
 .card {
   display: flex;
   flex-direction: column;
-  margin: 130px;
+  margin: 80px;
   align-items: center;
 }
 .button {
-  width: 300px;
+  width: 250px;
   height: 80px;
   border: 3px solid black;
   border-radius: 15px;
-  font-size: 50px;
+  font-size: 40px;
   font-family: Hiragino Maru Gothic ProN;
 }
 .CPU {
   background-color: #ab47f5;
-  margin: 30px;
+  margin: 25px;
 }
 .twoPlayer {
   background-color: #00ffa7;
-  margin: 30px;
+  margin: 25px;
 }
