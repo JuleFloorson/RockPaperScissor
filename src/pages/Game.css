@@ -1,15 +1,15 @@
-.card_winner {
+.card_game {
   display: flex;
   flex-direction: column;
   margin: 30px;
   align-items: center;
 }
-.output_winner {
+.output_game {
   font-family: Hiragino Maru Gothic ProN;
   font-size: 40px;
   margin: 0;
 }
-.button_winner {
+.button_game {
   width: 230px;
   height: 70px;
   border: 3px solid black;
@@ -17,11 +17,15 @@
   font-size: 40px;
   font-family: Hiragino Maru Gothic ProN;
 }
-.winner {
+.rock {
+  background-color: #ab47f5;
+  margin: 18px;
+}
+.paper {
   background-color: #00ffa7;
   margin: 18px;
 }
-.playAgain_winner {
+.scissor {
   background-color: #47bff5;
   margin: 18px;
 }

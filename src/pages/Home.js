@@ -1,13 +1,18 @@
 import './Home.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
     <>
-      <card className="card">
-        <button className="CPU button">1 vs CPU</button>
-        <button className="twoPlayer button">1 vs 1</button>
-      </card>
+      <div className="card_home">
+        <Link to="/game">
+          {' '}
+          <button className="CPU button_home">1 vs CPU</button>
+        </Link>
+
+        <button className="twoPlayer button_home">1 vs 1</button>
+      </div>
     </>
   );
 }
