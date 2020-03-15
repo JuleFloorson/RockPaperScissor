@@ -18,7 +18,7 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/rpc">
+            <Route path="/game">
               <Game />
             </Route>
             <Route path="/winner">
