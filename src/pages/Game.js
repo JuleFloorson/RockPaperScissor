@@ -77,7 +77,7 @@ function Game() {
     }
     return;
   }
-  getWinner(symbolCpu, symbolPlayer);
+  getWinner();
 
   // } while (winPlayer < winningCondition && winCpu < winningCondition);
   // if (winPlayer >= winningCondition) {
