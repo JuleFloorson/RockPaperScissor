@@ -15,7 +15,6 @@ const HeadingOne = styled.h1`
   flex-basis: 75%;
   border-left: 4px dashed black;
   border-top: 4px dashed black;
-
   margin: 0px;
 `;
 const DivOne = styled.div`
@@ -53,7 +52,7 @@ function AppHeader() {
       <DivOne></DivOne>
       <DivTwo></DivTwo>
       <HeadingTwo>Paper</HeadingTwo>
-      <HeadingThree>Scissor</HeadingThree>
+      <HeadingThree>Scissors</HeadingThree>
     </Header>
   );
 }
