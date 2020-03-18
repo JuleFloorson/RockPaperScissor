@@ -1,53 +1,62 @@
-import './Game.css';
 import React from 'react';
+import styled from '@emotion/styled';
+
+const CardGame = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  align-items: center;
+`;
+const OutputGame = styled.div`
+  font-family: Hiragino Maru Gothic ProN;
+  font-size: 40px;
+  margin: 0;
+`;
+const Button = styled.button`
+  width: 230px;
+  height: 70px;
+  border: 3px solid black;
+  border-radius: 15px;
+  font-size: 40px;
+  font-family: Hiragino Maru Gothic ProN;
+  margin: 18px;
+`;
+
+const RockButton = styled(Button)`
+  background-color: #ab47f5;
+`;
+const PaperButton = styled(Button)`
+  background-color: #00ffa7;
+`;
+const ScissorButton = styled(Button)`
+  background-color: #47bff5;
+`;
 
 function Game() {
-  let symbolCpu = '';
-  let symbolPlayer = '';
+  const [symbolCpu, setSymbolCpu] = React.useState(null);
+  const [symbolPlayer, setSymbolPlayer] = React.useState(null);
 
-  function handleClick(number) {
-    if (number === 1) {
-      symbolPlayer = 'rock';
+  React.useEffect(() => {
+    if (!symbolPlayer) {
+      return;
     }
-    if (number === 2) {
-      symbolPlayer = 'paper';
-    }
-    if (number === 3) {
-      symbolPlayer = 'scissor';
-    }
-    console.log(symbolPlayer);
-
-    return symbolPlayer;
-  }
-
-  function cpu() {
     let randomNumber = Math.random() * 3;
     randomNumber = Math.round(randomNumber + 0.5);
-
     if (randomNumber === 1) {
-      symbolCpu = 'rock';
+      setSymbolCpu('rock');
     }
     if (randomNumber === 2) {
-      symbolCpu = 'paper';
+      setSymbolCpu('paper');
     }
     if (randomNumber === 3) {
-      symbolCpu = 'scissor';
+      setSymbolCpu('scissor');
+    }
+  }, [symbolPlayer]);
+  React.useEffect(() => {
+    if (!symbolCpu || !symbolPlayer) {
+      return;
     }
 
-    return symbolCpu;
-  }
-
-  // let winPlayer = 0;
-  // let winCpu = 0;
-  function getWinner() {
-    let computer = cpu();
-    let player = symbolPlayer;
-
-    console.log(computer);
-    console.log(player);
-    if (computer === player) {
-      alert('unentschieden');
-    }
     if (symbolCpu === symbolPlayer) {
       alert('unentschieden');
     }
@@ -75,45 +84,20 @@ function Game() {
       // winPlayer++;
       alert('You win against paper.');
     }
-    return;
-  }
-  getWinner();
-
-  // } while (winPlayer < winningCondition && winCpu < winningCondition);
-  // if (winPlayer >= winningCondition) {
-  //   alert('You win the game.');
-  // } else {
-  //   alert('The Cpu win.');
-  // }
-
+  }, [symbolCpu, symbolPlayer]);
   return (
     <>
-      <div className="card_game">
-        <div className="output_game">1 : 1</div>
-        <button
-          value="1"
-          onClick={() => handleClick(1)}
-          className="rock button_game"
-        >
-          Rock
-        </button>
-        <button
-          value="2"
-          onClick={() => handleClick(2)}
-          className="paper button_game"
-        >
+      <CardGame>
+        <OutputGame>1 : 1</OutputGame>
+        <RockButton onClick={() => setSymbolPlayer('rock')}>Rock</RockButton>
+        <PaperButton onClick={() => setSymbolPlayer('paper')}>
           Paper
-        </button>
-        <button
-          value="3"
-          onClick={() => handleClick(3)}
-          className="scissor button_game"
-        >
+        </PaperButton>
+        <ScissorButton onClick={() => setSymbolPlayer('scissor')}>
           Scissor
-        </button>
-      </div>
+        </ScissorButton>
+      </CardGame>
     </>
   );
 }
-
 export default Game;
