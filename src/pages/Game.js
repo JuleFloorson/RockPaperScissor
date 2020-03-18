@@ -11,6 +11,7 @@ const OutputGame = styled.div`
   font-family: Hiragino Maru Gothic ProN;
   font-size: 40px;
   margin: 0;
+  color: ${props => props.theme.colors.textPrimary};
 `;
 const Button = styled.button`
   width: 230px;
@@ -20,16 +21,17 @@ const Button = styled.button`
   font-size: 40px;
   font-family: Hiragino Maru Gothic ProN;
   margin: 18px;
+  color: ${props => props.theme.colors.textPrimary};
 `;
 
 const RockButton = styled(Button)`
-  background-color: #ab47f5;
+  background-color: ${props => props.theme.colors.buttonPrimary};
 `;
 const PaperButton = styled(Button)`
-  background-color: #00ffa7;
+  background-color: ${props => props.theme.colors.buttonSecondary};
 `;
 const ScissorButton = styled(Button)`
-  background-color: #47bff5;
+  background-color: ${props => props.theme.colors.buttonTertiary};
 `;
 
 function Game() {

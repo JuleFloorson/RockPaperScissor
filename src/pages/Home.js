@@ -16,14 +16,15 @@ const Button = styled.button`
   font-size: 40px;
   font-family: Hiragino Maru Gothic ProN;
   margin: 25px;
+  color: ${props => props.theme.colors.textPrimary};
 `;
 
 const CpuButton = styled(Button)`
-  background-color: #ab47f5;
+  background-color: ${props => props.theme.colors.buttonPrimary};
 `;
 
 const PlayerButton = styled(Button)`
-  background-color: #00ffa7;
+  background-color: ${props => props.theme.colors.buttonSecondary};
 `;
 
 function Home() {

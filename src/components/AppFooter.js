@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 const Footer = styled.footer`
   position: fixed;
   bottom: 0;
-  border-top: 4px dashed black;
+  border-top: ${props => props.theme.borders.footerBorder};
   width: 100%;
 `;
 const Image = styled.img`

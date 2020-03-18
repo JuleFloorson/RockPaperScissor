@@ -8,40 +8,41 @@ const Header = styled.header`
   flex-flow: row wrap;
   font-family: Hiragino Maru Gothic ProN;
   font-size: 28px;
+  color: ${props => props.theme.colors.textPrimary};
   margin: 0px;
 `;
 const HeadingOne = styled.h1`
   padding-left: 15px;
   flex-basis: 75%;
-  border-left: 4px dashed black;
-  border-top: 4px dashed black;
+  border-left: ${props => props.theme.borders.headerBorder};
+  border-top: ${props => props.theme.borders.headerBorder};
   margin: 0px;
 `;
 const DivOne = styled.div`
   flex-basis: 25%;
-  border-left: 4px dashed black;
-  border-top: 4px dashed black;
-  border-right: 4px dashed black;
+  border-left: ${props => props.theme.borders.headerBorder};
+  border-top: ${props => props.theme.borders.headerBorder};
+  border-right: ${props => props.theme.borders.headerBorder};
 `;
 const DivTwo = styled.div`
   flex-basis: 25%;
-  border-left: 4px dashed black;
-  border-top: 4px dashed black;
-  border-bottom: 4px dashed black;
+  border-left: ${props => props.theme.borders.headerBorder};
+  border-top: ${props => props.theme.borders.headerBorder};
+  border-bottom: ${props => props.theme.borders.headerBorder};
 `;
 const HeadingTwo = styled.h1`
   margin: 0px;
   padding-right: 15px;
   text-align: right;
   flex-basis: 75%;
-  border: 4px dashed black;
+  border: ${props => props.theme.borders.headerBorder};
 `;
 const HeadingThree = styled.h1`
   margin: 0px;
   text-align: center;
-  border-right: 4px dashed black;
-  border-left: 4px dashed black;
-  border-bottom: 4px dashed black;
+  border-right: ${props => props.theme.borders.headerBorder};
+  border-left: ${props => props.theme.borders.headerBorder};
+  border-bottom: ${props => props.theme.borders.headerBorder};
   flex-basis: 100%;
 `;
 
