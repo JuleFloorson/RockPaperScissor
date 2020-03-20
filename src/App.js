@@ -9,17 +9,23 @@ import Loser from './pages/Loser';
 import GlobalStyles from './components/GlobalStyles';
 import { ThemeProvider } from 'emotion-theming';
 import retro from './themes/retro';
+import modern from './themes/modern';
 
 function App() {
+  const [theme, setTheme] = React.useState(retro);
   return (
-    <ThemeProvider theme={retro}>
+    <ThemeProvider theme={theme}>
       <Router>
         <GlobalStyles />
         <AppHeader />
         <main>
           <Switch>
             <Route exact path="/">
-              <Home />
+              <Home
+                onThemeButtonClick={() => {
+                  setTheme(theme === retro ? modern : retro);
+                }}
+              />
             </Route>
             <Route path="/game">
               <Game />

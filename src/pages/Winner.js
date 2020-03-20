@@ -17,12 +17,12 @@ const OutputWinner = styled.div`
 const Button = styled.button`
   width: 230px;
   height: 70px;
-  border: 3px solid black;
+  border: ${props => props.theme.borders.buttonBorder};
   border-radius: 15px;
   font-size: 40px;
   font-family: Hiragino Maru Gothic ProN;
   margin: 18px;
-  color: ${props => props.theme.colors.textPrimary};
+  color: ${props => props.theme.colors.textSecondary};
 `;
 const WinnerButton = styled(Button)`
   background-color: ${props => props.theme.colors.buttonSecondary};
