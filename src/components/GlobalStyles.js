@@ -4,13 +4,13 @@ import { Global, css } from '@emotion/core';
 function GlobalStyles() {
   return (
     <Global
-      styles={css`
+      styles={theme => css`
         * {
           box-sizing: border-box;
         }
         body {
           margin: 0;
-          background-color: ${props => props.theme.colors.backgroundPrimary};
+          background-color: ${theme.colors.backgroundPrimary};
         }
       `}
     />
